@@ -10,4 +10,6 @@
 
 # useEffect is the most important hook in react, because it lets you control how the component behaves in each cycle
 
+## As a beginner useEffect the only way to fetch data from an API and we know the data make the app alive
+
 ## the GOD hook
