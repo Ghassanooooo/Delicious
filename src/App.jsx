@@ -65,6 +65,7 @@ export default function App() {
 
   const handerCloseSearch = () => {
     setIngredients([]);
+    setSearchQuery("");
     inputRef.current.value = "";
   };
 
