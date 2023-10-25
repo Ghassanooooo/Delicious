@@ -76,7 +76,7 @@ export default function App() {
   return (
     <div className={`h-screen ${darkMode ? "dark" : ""}`}>
       <div
-        className={`h-full overflow-auto bg-white dark:bg-black text-black dark:text-white`}
+        className={`h-full pb-4 overflow-auto bg-white dark:bg-black text-black dark:text-white`}
       >
         <button
           className="absolute bg-slate-100 text-black p-2 top-2 right-5 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium "
