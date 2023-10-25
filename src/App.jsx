@@ -56,10 +56,16 @@ export default function App() {
     const value = e.target.value.trim().toLowerCase();
     if (!value || value.length < 3) {
       setIngredients([]);
+      setSearchQuery("");
       return;
     }
     const find = list.filter((str) => str.includes(value));
     setIngredients(find);
+  };
+
+  const handerCloseSearch = () => {
+    setIngredients([]);
+    inputRef.current.value = "";
   };
 
   const handlerSelectIngredient = (e) => {
@@ -84,6 +90,7 @@ export default function App() {
         >
           {darkMode ? "Light" : "Dark"}
         </button>
+
         <h1 className="text-3xl text-center p-8">Delicious</h1>
         <div className="w-1/2 m-auto mt-8 sticky top-2">
           <input
@@ -95,6 +102,12 @@ export default function App() {
           />
           {ingredients.length >= 3 && (
             <div className="border p-4 absolute top-10 w-full bg-slate-50 dark:bg-slate-800">
+              <button
+                className="absolute  p-2 top-2 right-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium "
+                onClick={handerCloseSearch}
+              >
+                X
+              </button>
               {ingredients.map((ingredient) => (
                 <p
                   onClick={handlerSelectIngredient}
