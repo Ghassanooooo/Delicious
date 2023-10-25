@@ -102,7 +102,7 @@ export default function App() {
             onChange={handerSearch}
           />
           {ingredients.length >= 3 && (
-            <div className="border p-4 absolute top-10 w-full bg-slate-50 dark:bg-slate-800">
+            <div className="border p-4 absolute top-10 max-h-[70vh] overflow-auto w-full bg-slate-50 dark:bg-slate-800">
               <button
                 className="absolute  p-2 top-2 right-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium "
                 onClick={handerCloseSearch}
